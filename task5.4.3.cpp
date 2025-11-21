@@ -1,3 +1,4 @@
+// Р—Р°РґР°РЅРёРµ 48 СЃРѕСЂС‚РёСЂРѕРІРєР° СЃС‚СЂРѕРє РїРѕ СѓР±С‹РІР°РЅРёСЋ СЃСЂРµРґРЅРµРіРѕ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРіРѕ
 #include <iostream>
 using namespace std;
 
@@ -10,19 +11,18 @@ double average(double sum, int numberOfElements) {
 int main() {
     setlocale(LC_ALL, "rus");
     int rows, columns;
-    cout << "Введите количество строк и столбцов: ";
+    cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє Рё СЃС‚РѕР»Р±С†РѕРІ: ";
     cin >> rows >> columns;
 
     int arr[rows][columns];
-    cout << "Введите двумерный массив: " << endl;
+    cout << "Р’РІРµРґРёС‚Рµ РґРІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ: " << endl;
     for(int i = 0; i < rows; i++) {
-        cout << "Строка " << i + 1 << ": ";
+        cout << "РЎС‚СЂРѕРєР° " << i + 1 << ": ";
         for (int j = 0; j < columns; j++) {
             cin >> arr[i][j];
         }
     }
 
-    // Вычисление средних значений для каждой строки
     int summa = 0;
     double arrSumma[rows];
     for(int i = 0; i < rows; i++) {
@@ -33,25 +33,13 @@ int main() {
         summa = 0;
     }
 
-    // Вывод исходного массива и средних значений
-    cout << "\nИсходный массив:" << endl;
-    for(int i = 0; i < rows; i++) {
-        for (int j = 0; j < columns; j++) {
-            cout << arr[i][j] << " ";
-        }
-        cout << "| Среднее: " << arrSumma[i] << endl;
-    }
 
-    // Сортировка пузырьком по убыванию средних значений
     for(int i = 0; i < rows - 1; i++) {
         for(int j = 0; j < rows - i - 1; j++) {
             if(arrSumma[j] < arrSumma[j + 1]) {
-                // Обмен средних значений
                 double tempAvg = arrSumma[j];
                 arrSumma[j] = arrSumma[j + 1];
                 arrSumma[j + 1] = tempAvg;
-
-                // Обмен строк в массиве
                 for(int k = 0; k < columns; k++) {
                     int temp = arr[j][k];
                     arr[j][k] = arr[j + 1][k];
@@ -61,13 +49,12 @@ int main() {
         }
     }
 
-    // Вывод отсортированного массива
-    cout << "\nОтсортированный массив (по убыванию средних):" << endl;
+    cout << "РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ РїРѕ СѓР±С‹РІР°РЅРёСЋ СЃСЂРµРґРЅРёС… Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРёС… СЃС‚СЂРѕРє:" << endl;
     for(int i = 0; i < rows; i++) {
         for (int j = 0; j < columns; j++) {
             cout << arr[i][j] << " ";
         }
-        cout << "| Среднее: " << arrSumma[i] << endl;
+        cout << arrSumma[i] << endl;
     }
 
     return 0;
