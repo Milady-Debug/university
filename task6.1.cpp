@@ -6,12 +6,13 @@ int main() {
     int costOfBase=0;
     int costOfBlade=0;
     int maxCostOfSpinner=0,totalNumberOfBlade = 0;
-    cout<<"Ââåäèòå ñòîèìîñòü îñíîâàíèÿ, ñòîèìîñòü îäíîé ëîïàñòè ñïèííåðà"<< endl;
+    cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ñ, ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð¾Ð´Ð½Ð¾Ð¹ Ð»Ð¾Ð¿Ð°ÑÑ‚Ð¸ ÑÐ¿Ð¸Ð½Ð½ÐµÑ€Ð°"<< endl;
     cin>> costOfBase;
     cin>> costOfBlade;
-    cout<<"Ââåäèòå ìàêñèìàëüíóþ ñòîèìîñòü îäíîãî ñïèííåðà "<<endl;
+    cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½ÑƒÑŽ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð¾Ð´Ð½Ð¾Ð³Ð¾ ÑÐ¿Ð¸Ð½Ð½ÐµÑ€Ð° "<<endl;
     cin>>maxCostOfSpinner;
     totalNumberOfBlade = (maxCostOfSpinner - costOfBase)/costOfBlade;
+    cout<<"ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð»ÐµÐ·Ð²Ð¸Ð¹"<<endl;
     cout<<totalNumberOfBlade;
     return 0;
 }
