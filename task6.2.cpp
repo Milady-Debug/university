@@ -6,9 +6,9 @@ int main() {
     int amountOfBlades=0, amountOfThree;
     int remaining;
 
-    cout<<"Ââåäèòå êîëè÷åñòâî ëîïàñòåé"<< endl;
+    cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð»Ð¾Ð¿Ð°ÑÑ‚ÐµÐ¹"<< endl;
     cin>> amountOfBlades;
-    for(int i = 0; (i * 4) <= amountOfBlades; i++){
+    for(int amountOfFour = 0; (amountOfFour * 4) <= amountOfBlades; amountOfFour++){
         remaining = amountOfBlades - (i*4);
         if(remaining %3 ==0){
             amountOfThree = remaining/3;
