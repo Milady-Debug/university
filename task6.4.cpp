@@ -13,9 +13,9 @@ int main() {
     int compartment[9]{};
     int amount;
     int place;
-    cout<<"Ââåäèòå êîëè÷åñòâî ñâîáîäíûõ ìåñò"<<endl;
+    cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ²Ð¾Ð±Ð¾Ð´Ð½Ñ‹Ñ… Ð¼ÐµÑÑ‚"<<endl;
     cin >> amount;
-    cout<<"Ââåäèòå íîìåðà ñâîáîäíûõ ìåñò"<<endl;
+    cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€Ð° ÑÐ²Ð¾Ð±Ð¾Ð´Ð½Ñ‹Ñ… Ð¼ÐµÑÑ‚"<<endl;
     for (int i = 0; i < amount; i++) {
         cin >> place;
         compartment[whatCompartment(place)]++;
@@ -32,7 +32,7 @@ int main() {
             notInPlaceYet = 0;
         }
     }
-    cout<<"Êîëè÷åñòâî ñâîáîäíûõ êóïå, èäóùèõ ïîäðÿä "<<endl;
+    cout<<"ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ²Ð¾Ð±Ð¾Ð´Ð½Ñ‹Ñ… ÐºÑƒÐ¿Ðµ, Ð¸Ð´ÑƒÑ‰Ð¸Ñ… Ð¿Ð¾Ð´Ñ€ÑÐ´ "<<endl;
     cout << freeCompartment;
 
     return 0;
