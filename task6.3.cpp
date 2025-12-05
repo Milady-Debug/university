@@ -4,9 +4,10 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "rus");
     int rows=0,collumns =0;
-    cout<<"Ââåäèòå êîëè÷åñòâî ñòîëáöîâ è ñòðîê"<<endl;
+    cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð² Ð¸ ÑÑ‚Ñ€Ð¾Ðº"<<endl;
     cin>>rows>>collumns;
-    cout<<"Êîëè÷åñòâî ïðÿìîóãîëüíèêîâ, êîòîðûõ ìîæíî âûðåçàòü"<<endl;
+    cout<<"ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¾Ð², ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ñ… Ð¼Ð¾Ð¶Ð½Ð¾ Ð²Ñ‹Ñ€ÐµÐ·Ð°Ñ‚ÑŒ"<<endl;
     cout<<(rows*(rows+1)/2)*(collumns*(collumns+1)/2);
     return 0;
 }
+
