@@ -9,10 +9,10 @@ int main() {
     cout<<"Введите количество лопастей"<< endl;
     cin>> amountOfBlades;
     for(int amountOfFour = 0; (amountOfFour * 4) <= amountOfBlades; amountOfFour++){
-        remaining = amountOfBlades - (i*4);
+        remaining = amountOfBlades - (amountOfFour*4);
         if(remaining %3 ==0){
             amountOfThree = remaining/3;
-            cout<<amountOfThree<< endl<< i<<endl;
+            cout<<amountOfThree<< endl<< amountOfFour<<endl;
             return 0;
         }
     }
