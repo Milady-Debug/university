@@ -2,7 +2,7 @@
 #include <chrono>
 #include <cstdlib>
 #include <ctime>
-
+#include <iomanip>
 using namespace std;
 using namespace chrono;
 
@@ -14,7 +14,7 @@ void selectionSort(int* a, int n, long long& cmp, long long& mov, double& elapse
     for (int i = 0; i < n - 1; ++i) {
         int min_idx = i;
         for (int j = i + 1; j < n; ++j) {
-            ++cmp;
+            cmp++;
             if (a[j] < a[min_idx]) {
                 min_idx = j;
             }
@@ -23,7 +23,7 @@ void selectionSort(int* a, int n, long long& cmp, long long& mov, double& elapse
             int tmp = a[i];
             a[i] = a[min_idx];
             a[min_idx] = tmp;
-            mov += 3;
+            mov+=3;
         }
     }
     auto end = high_resolution_clock::now();
@@ -37,12 +37,12 @@ void bubbleSort(int* a, int n, long long& cmp, long long& mov, double& elapsed) 
     mov = 0;
     for (int i = 0; i < n - 1; ++i) {
         for (int j = 0; j < n - i - 1; ++j) {
-            ++cmp;
+            cmp++;
             if (a[j] > a[j + 1]) {
                 int tmp = a[j];
                 a[j] = a[j + 1];
                 a[j + 1] = tmp;
-                mov += 3;
+                mov+=3;
             }
         }
     }
@@ -93,7 +93,7 @@ void runSortingTests() {
     int sizes[] = {100, 200, 500, 1000, 2000, 5000, 10000,
                    100000, 200000, 500000, 1000000};
     int numSizes = sizeof(sizes) / sizeof(sizes[0]);
-
+    cout << fixed << setprecision(6);
     cout << "Comparison of Selection sort and Bubble sort\n";
 
     for (int i = 0; i < numSizes; ++i) {
